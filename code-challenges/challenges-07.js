@@ -93,15 +93,15 @@ const objLat = (obj) => {
 //  2- If one of the names is null dont add it to the full name
 
 const cvFormatter = (arr) => {
-    // let fullName
-    // if(arr[0] != "null" && arr[1] != "null"){
-    //     fullName = arr[0] + arr[1];
-    // }
-    // let tech = [];
-    // if(arr[2]>1){
-    //     tech =[arr[0]+arr[1],arr[4]]
-    // }
-    // return tech
+     let fullName
+     if(arr[0] != "null" && arr[1] != "null"){
+         fullName = arr[0] + arr[1];
+     }
+     let tech = [];
+     if(arr[2]>1){
+         tech =[arr[0]+arr[1],arr[4]]
+     }
+     return tech
 };
 // -------------------------------------------------------------------------------------------------------
 
