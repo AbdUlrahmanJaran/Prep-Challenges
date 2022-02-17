@@ -109,7 +109,18 @@ const roundDecimals = (arr) => {
 //
 
 const employeesBonus = (arr) => {
-    // write your code here
+    let result = arr;
+    result.forEach(i=>{
+        if(i.workHours>8){
+            i.salary = i.salary.slice(0, -1);
+            i.salary = Number(i.salary)+100+"$"
+        }
+        else{
+            i.salary = i.salary.slice(0, -1);
+            i.salary = Number(i.salary)+50+"$"
+        }
+    });
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
