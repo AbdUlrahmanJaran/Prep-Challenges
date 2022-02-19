@@ -27,14 +27,16 @@
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
 const customerAndAge = (obj) => {
-  let arr = [];
-  let strings =[];
-    for (let i = 0; i < obj.length; i++) {
-      arr =obj[i].split(":");
-    strings[i]=`Customer Name : ${arr[0]} , Age :${arr[1]}`;
+  let costomers = [];
+  for (let costomer in obj){
+    let str = "Customer Name :" + costomer + " , Age :" + obj[costomer];
+    costomers.push(str);
   }
-  return strings;
+
+  return costomers;
 };
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -59,11 +61,12 @@ const customerAndAge = (obj) => {
 // You can solve this challenge by using Object.entries
 
 const getEntries = (obj) => {
-  let result = [];
-  function recipe(obj) {
-    result =[`name: ${obj.name}`, `ingredients: ${obj.ingredients.toString()}`, `cookTime: ${obj.cookTime}`,` price: ${obj.price}`] 
-    
-  }
+  let text= "";
+  let result=[];
+  for (const [key, value] of Object.entries(obj)) {
+    text=`${key}: ${value}`;
+    result.push(text);
+
   return result
 };
 // -------------------------------------------------------------------------------------------------------
